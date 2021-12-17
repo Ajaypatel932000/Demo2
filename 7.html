@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="angular.js"></script>
+        <script src="script7.js"></script>
+    </head>
+    <body ng-app="module7">
+        <div ng-controller="myctl7">
+            {{msg}}
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Like</th>
+
+                        <th>DisLike</th>
+
+                        <th>Like/DisLike</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                       <tr ng-repeat="t in tech">
+                             <td>{{t.name}}</td>
+                             <td>{{t.likes}}</td>
+                             <td>{{t.dislikes}}</td>
+                             <td>
+                                 <input type="button" value="Like" ng-click="incrementLikes(t)"/>
+                                 <input type="button" value="DisLike" ng-click="incrementDisLikes(t)"/>
+                             </td>
+                       </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>

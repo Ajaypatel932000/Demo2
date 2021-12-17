@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title></title>
+        <script src="angular.js"></script>
+        <script>
+               var app=angular.module("myapp",[])
+                              .controller("mycontroller",function($scope){
+                                  $scope.firstName="ajay";
+                                  $scope.lastName="Patel";
+                              })
+        </script>
+    </head>
+    <body ng-app="myapp">
+        <div ng-controller="mycontroller">
+        First Name<input type="text" ng-model="firstName"><br>
+        Last Name<input type="text" ng-model="lastName"><br>
+        Full Name : {{firstName + lastName}}
+
+    </div>
+        <br>
+      
+    </body>
+</html>

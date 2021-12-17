@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="angular.js"></script>
+         <script src="script14.js"></script>
+    </head>
+    <body ng-app="module14">
+         <div ng-controller="controller14">
+
+            <input type="checkbox"  ng-model="hideSalary"> HideSalary<br>
+
+            
+             <table border="3">
+                 <tr>
+                     <th>Name</th>
+                     <th>Gender</th>
+                     <th>City</th>
+                     <th ng-hide="hideSalary">Salary</th>
+                     <th ng-show="hideSalary">Salary</th>
+                 </tr>
+                 <tr ng-repeat="x in emp">
+                        <td>{{x.name}}</td>
+                        <td>{{x.gender}}</td>
+                        <td>{{x.city}}</td>
+                        <td ng-hide="hideSalary">{{x.salary}} </td>
+                        <td ng-show="hideSalary">##### </td>
+                 </tr>
+             </table>
+         </div>
+
+    </body>
+</html>

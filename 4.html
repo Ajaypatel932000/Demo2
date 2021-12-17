@@ -1,0 +1,48 @@
+<!-- 
+<html>
+    <head>
+         <script src="angular.min.js"></script> 
+       
+         <script src="angular.js"></script>
+
+        <script src="script2.js" ></script>
+
+    </head>
+<body ng-app="myapp">
+    
+    <div ng-controller="myctl">
+       {{message}}
+        <h1>First Name :{{ employee.firstName}}</h1>
+        <h2>Last Name :{{employee.lastName}}</h2>
+        <h2>Gender : {{employee.gender}}</h2>
+        {{message}}  
+        {{employee.gender}}
+        <br>
+        <br>
+        <img src="ang.jpeg"  alt="wrong path" height="200px"/>
+
+    </div>
+</body>
+</html> -->
+
+<html>
+    <head>
+        <script src="angular.js"></script>
+        
+         <script src="script2.js" ></script>
+         <!-- <script src="angular.js"></script>
+
+         <script src="script2.js" ></script> -->
+
+    </head>
+    <body ng-app="myapp">
+        <div ng-controller="myctl">
+            {{country.name}}
+            <br>
+            {{country.flag}}
+          <br>
+          <br>
+          <img src="{{country.flag}}"  alt="wrong path" height="200px"/>
+    </div>
+    </body>
+</html>

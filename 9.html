@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <script src="angular.js" ></script>
+        <script>
+                var app=angular.module("mymodule9",[])
+               .controller("mycontroller9",function($scope){
+
+                 var emp=[
+                     { name:"Ajay",dateOfBirth: new Date("Nov 23, 1980"),gender:"Male",salary:55000},
+                     { name:"Karan",dateOfBirth: new Date("Jan 3, 1980"),gender:"Male",salary:85000},
+                     { name:"Sumit",dateOfBirth: new Date("June 14, 1980"),gender:"Male",salary:75000},
+                     { name:"Rajal",dateOfBirth: new Date("Nov 11, 1980"),gender:"Female",salary:95000},
+                     { name:"Manisha",dateOfBirth: new Date("Nov 23, 1980"),gender:"Female",salary:55000}
+                 ];
+                 $scope.emp=emp;
+                 $scope.sortCol='name';
+            
+               })
+
+        </script>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body ng-app="mymodule9">
+           
+          <div ng-controller="mycontroller9">
+              Select<select ng-model="sortCol">
+                      <option value='name'>Name Asc</option>
+                      <option value='gender'>Gender Asc</option>
+                      <option value='-salary'>Salary Desc</option>
+              </select>
+                  <br>
+              <br>
+                  <table>
+                      <thead>                
+                      <tr>
+                          <th>Name</th>
+                          <th>DOB</th>
+                          <th>Gender</th>
+                          <th>Salary(number)</th>
+                          <th>Salary(currency)</th>
+                          
+                      </tr>
+                    </thead>
+                    <tbody>
+                         <tr ng-repeat="e in emp | orderBy:sortCol">
+                               
+                            <td>{{e.name  | uppercase}} </td>
+                            <td>{{e.dateOfBirth | date:"dd/MM/yyyy"}}</td>
+                            <td>{{e.gender | lowercase}}</td>
+                            <td>{{e.salary | number:2}}</td>
+                            <td>{{e.salary |currency}}</td>
+                         </tr>
+                    </tbody>
+                       
+                  </table>
+          </div>
+          
+    </body>
+</html>

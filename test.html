@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>AngularJS | ng-include Directive</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+	</script>
+</head>
+<body ng-app="main-app">
+	
+		<h1 style="color: green;">GeeksforGeeks</h1>
+		<h3>ng-include Directive</h3>
+		<div ng-controller="AngularController">
+			<div ng-include="'table.html'"></div>
+		</div>
+
+
+<script>
+	var main_app = angular.module('main-app', []);
+	main_app.controller('AngularController', function($scope) {
+	$scope.tutorials =[
+			{Name: "AngularJS", Description : "Front End Framework"},
+			{Name: "NodeJS", Description : "Server side JavaScript"},
+			{Name: "ExpressJS", Description : "Server side JS Framework"}
+		];
+	});
+</script>
+</body>
+</html>

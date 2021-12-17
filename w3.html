@@ -1,0 +1,64 @@
+<html>
+    <head>
+           <script src="angular.js"></script>
+           <script src="wScript1.js"></script>
+    </head>
+    <body ng-app="myapp">
+        Select<input type="checkbox" ng-model="check">
+        <div ng-show="check">
+          <h1 style="color:rgb(78, 47, 255)"> show ng-show true it will visible :: {{check}}</h1>
+        </div>
+        <div ng-hide="check">
+          <h1 style="color:rgb(78, 47, 255)">  Hide ng-hide false it will be hide  :: {{check}}</h1>
+        </div>
+        
+        <hr>
+        <br>
+        <br>
+        <div ng-controller="myctl">
+            {{name}}<br>
+            <br>
+            {{msg1}}
+        </div>
+        <div ng-controller=myctl2>
+          
+            {{name}}<br>
+            <br>
+            {{msg2}}<br>
+            <br>
+            {{msg1}}
+        </div>
+          <h1>ng-init Example . </h1>
+          <div ng-init="name='Vijay';id=20;">
+              <h1>{{name}}</h1>
+              <h2>{{id}}</h2>
+          </div>
+          <h1>ng-repeat example .</h1>
+          <div ng-init="arr=[10,20,30,40,50,60]">
+                  
+            <ul>
+                 <li ng-repeat="i in arr">
+                         {{i}}
+                 </li>
+            </ul>
+          </div>
+
+          <div ng-init="user=[
+                                  {name:'AJAY',salary:300},
+                                  {name:'JAY',salary:500},
+                                  {name:'KAMIL',salary:350} 
+                               ]">
+
+               <table border="5px">
+                   <tr>
+                       <td>Name</td>
+                       <td>Salary</td>
+                   </tr>
+                   <tr ng-repeat="x in user">
+                        <td>{{x.name}}</td>
+                        <td>{{x.salary}}</td>
+                   </tr>
+               </table>
+        </div>
+    </body>
+</html>

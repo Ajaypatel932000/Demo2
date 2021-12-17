@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script src="angular.js">
+
+        </script>
+        <script src="script6.js"></script>
+    </head>
+    <body> 
+        Uncomment below code only one code work
+     <!-- <div ng-app="module6">
+      <div ng-controller="myctl6">
+           {{msg}}
+           <table>
+               <thead>
+                   <tr>
+                       <th>FirstName</th>
+                       <th>LastName</th>
+                       <th>Gender</th>
+                       <th>Salary</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr ng-repeat="emp in employee">
+                            <td>{{emp.firstName}}</td>
+                            <td>{{emp.lastName}}</td>
+
+                            <td>{{emp.gender}}</td>
+
+                            <td>{{emp.salary}}</td>
+
+
+                        </tr>
+               </tbody>
+           </table>
+      </div>
+ </div> -->
+
+        <div ng-app="mod6">
+            <div ng-controller="mc6">
+                      {{msg}}
+                <ul>
+                    
+                    <li ng-repeat="c in countries"> 
+                        {{c.name}} 
+                         <br>
+                        Parent Index :  {{$parent.$index}} <br>
+                        Index : {{$index}
+                        <ul>
+                            <li ng-repeat="city in c.cities">
+                                      {{city.name}} 
+                                      <br>
+                                      Parent Index :{{$parent.$index}} <br>
+                                      Index : {{$index}}
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

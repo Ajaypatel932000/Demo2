@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script src="angular.js"></script>
+        <script src="script5.js"></script>
+    </head>
+    <body ng-app="module5">
+        <div ng-controller="myctl5">
+
+            {{message}}
+            <h1>Two Way Data binding example.</h1>
+            <input type="text" ng-model="message" />
+           <br>
+           <br>
+           <br>
+           <h2>This is example of dynamic binding .</h2>
+            Enter some text: <input type="text" ng-model="greeting" />
+
+
+            {{greeting}}
+            
+            <h3>Dynamic binding used three tags</h3>
+            input<br>
+            select<br>
+            textarea<br>
+        </div>
+         <div ng-controller="myctl5"> 
+             Two table should be in one div.
+        <table> 
+            <tr>
+                <td>First Name </td>
+                <td> <input type="text" ng-model="emp.firstName"/></td>
+            </tr>
+            <tr>
+                <td>Last Name </td>
+                <td> <input type="text" ng-model="emp.lastName"/></td>
+            </tr>
+            <tr>
+                <td> Gender </td>
+                <td> <input type="text" ng-model="emp.gender"/></td>
+            </tr>
+        </table>
+    <!-- </div> -->
+
+    <h1>Dynamic Bind example .</h1>
+    <table> 
+        <tr>
+            <td>First Name </td>
+            <td> {{emp.firstName}}</td>
+        </tr>
+        <tr>
+            <td>Last Name </td>
+            <td> {{emp.lastName}}</td>
+        </tr>
+        <tr>
+            <td> Gender </td>
+            <td>{{emp.gender}}</td>
+        </tr>
+    </table>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script src="angular.js" ></script>
+        <script src="script8.js"></script>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body ng-app="mymodule8">
+           
+          <div ng-controller="mycontroller8">
+           Row to Display:   <input type="number"  step="1" min="0" max="5" ng-model="rowLimit">  
+              <br>
+              <br>
+                  <table>
+                      <thead>                
+                      <tr>
+                          <th>Name</th>
+                          <th>DOB</th>
+                          <th>Gender</th>
+                          <th>Salary(number)</th>
+                          <th>Salary(currency)</th>
+                          
+                      </tr>
+                    </thead>
+                    <tbody>
+                         <tr ng-repeat="e in emp |limitTo:rowLimit">
+                               
+                            <td>{{e.name  | uppercase}} </td>
+                            <td>{{e.dateOfBirth | date:"dd/MM/yyyy"}}</td>
+                            <td>{{e.gender | lowercase}}</td>
+                            <td>{{e.salary | number:2}}</td>
+                            <td>{{e.salary |currency}}</td>
+                         </tr>
+                    </tbody>
+                       
+                  </table>
+          </div>
+          
+    </body>
+</html>
